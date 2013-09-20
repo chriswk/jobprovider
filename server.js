@@ -4,17 +4,14 @@ app.use(express.logger());
 
 app.get('/', function (req, res) {
 	var ads = [{
-		ad: {
 			id: 1,
 			title: "My job",
 			orgname: "FINN.no"
 		}
-		},{
-		ad: {
+		,{
 			id: 2,
 			title: "My other job",
 			orgname: "FINN.no" 
-		}
 	}];
 	if (req.query.callback && req.query.callback != "") {
 		res.jsonp({ ads: ads})
